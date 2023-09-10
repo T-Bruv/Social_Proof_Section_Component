@@ -1,0 +1,170 @@
+/* Import a font from Google Fonts. */
+@import url('https://fonts.google.com/specimen/Poppins');
+/* Apply a universal reset for margins, padding, and box-sizing. Set a default font family. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Apply styles to the .wrapper class, adjust font size. */
+.wrapper{
+    font-size: 15px;
+}
+/* Apply background image, minimum height, and prevent image repetition to the .section class. */
+.section{
+    background-image: url(bg-pattern-top-desktop.svg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+/* Set maximum width for the .container class and center it horizontally with margins. */
+.container{
+    max-width: 80%;
+    margin: 0 auto 30px auto;
+}
+/* Style the upper section with flex layout and space between elements. */
+.upper{
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+/* Style the text section within the upper section. */
+.text{
+    flex-basis: 50%;
+}
+/* Style the heading within the .text section. */
+.text h1{
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    font-size: 50px;
+}
+/* Style the paragraph within the .text section. */
+.text p{
+    color: hsl(303, 10%, 53%);
+    line-height: 200%;
+}
+/* Style the star ratings, apply background color, padding, and borders. */
+.star{
+    background-color: hsl(300, 24%, 96%);
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+/* Style specific star ratings (rate-1, rate-2, rate-3) and their positions. */
+.rate-1{
+    right: 120px;
+}
+.rate-2{
+    right: 50px;
+}
+.rate-3{
+    left: 50px;
+}
+/* Style the text within the star ratings. */
+.star p{
+    font-weight: bold;
+    color: hsl(300, 43%, 22%);
+    margin-left: 15px;
+}
+/* Style the lower section containing customer reviews. */
+.lower{
+    display: flex;
+    position: relative;
+    top: 50px;
+    bottom: 50px;
+}
+/* Style the square boxes containing customer reviews. */
+.square{
+    background-color: hsl(300, 43%, 22%);
+    width: 350px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+    position: relative;
+}
+/* Style the second square box (box-2). */
+.box-2{
+    top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/* Style the third square box (box-3). */
+.box-3{
+    top: 30px;
+}
+/* Style the box info section containing customer information. */
+.box-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* Style the information within the box info section. */
+.box-info .info{
+    margin-left: 20px;
+    line-height: 120%;
+}
+/* Style the customer's name within the box info section. */
+.box-info .info h2{
+    color: white;
+    font-size: 15px;
+}
+/* Style the customer's verification status within the box info section. */
+.box-info .info p{
+    color: hsl(333, 80%, 67%);
+}
+/* Style the text within the square boxes. */
+.square p{
+    color: hsl(0, 0%, 100%);
+    display: inline;
+    font-size: 14px;
+}
+/* Style the customer's image within the square boxes. */
+.square img{
+    border-radius: 50%;
+    width: 50px;
+}
+/* Style the box content section containing customer reviews. */
+.square .box-content{
+    margin-bottom: 20px;
+}
+/* Apply responsive styles for screens with a maximum width of 768px. */
+@media(max-width : 768px){
+    /* Change background image for smaller screens. */
+    .section{
+        background-image: url(bg-pattern-top-mobile.svg);
+    }
+    /* Adjust layout for the upper section to be vertical. */
+    .upper{
+        flex-direction: column;
+    }
+    /* Center-align text within the .text section. */
+    .text{
+        text-align: center;
+    }
+    /* Reduce font size for the heading within the .text section. */
+    .text h1{
+        font-size: 30px;
+    }
+    /* Adjust font size and padding for the paragraph within the .text section. */
+    .text p{
+        font-size: 13px;
+        padding: 20px 0;
+    }
+    /* Adjust styles for the star ratings, making them vertical. */
+    .star{
+        position: relative;
+        right: 0;
+        flex-direction: column;
+    }
+    /* Add margin to the star icons for vertical spacing. */
+    .star.icon{
+        margin-bottom: 10px;
+    }
+    /* Adjust layout for the lower section to be vertical. */
+    .lower{
+        flex-direction: column;
+    }
+}
